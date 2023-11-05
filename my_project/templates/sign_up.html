@@ -1,5 +1,14 @@
-{% extends "base.html" %} {% block title %}Sign Up{%endblock %}
+{% extends "base.html" %}
 {% block content %}
+<div>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend cl>Sign Up</legend>
+
+        </fieldset>
+    </form>
+</div>
 <form method="POST">
     <h3 align="center">Sign Up</h3>
     <div class="form-group">

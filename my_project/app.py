@@ -1,7 +1,9 @@
 from flask import Flask, render_template, flash, request
+from forms import SignupForm, LoginForm
+
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'imeagert0'
+app.config['SECRET_KEY'] = '0c4bdc6795503f3d38a8cc9992879d9a'
 #app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
 
 post = [
@@ -39,24 +41,13 @@ def logout():
 
 @app.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
-    if request.method == 'POST':
-        email = request.form.get('email')
-        firstName = request.form.get('firstName')
-        password1 = request.form.get('password1')
-        password2 = request.form.get('password2')
-
-        if len(email) < 4:
-            flash('Email must be greater than 3 characters.', category='error')
-        elif len(firstName) < 2:
-            flash('First name must be greater than 1 character.', category='error')
-        elif password1 != password2:
-            flash('Passwords don\'t match.', category='success')
-        elif len(password1) < 7:
-            flash('Password must be at least 7 characters.', category='error')
-        else:
-            flash('Account created.', category='success')
+    form = SignupForm()
+    
         
-    return render_template("sign_up.html")
+
+        
+        
+    return render_template("sign_up.html", title='Sign Up', form=form)
 
 
 
