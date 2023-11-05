@@ -1,6 +1,6 @@
-#Webstack - Portfolio Project
+# Webstack - Portfolio Project
 
-##Group project Front-end Back-end Portfolio project
+## Group project Front-end Back-end Portfolio project
 
 Concepts For this project, we expect you to look at this concept:
 
