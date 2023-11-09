@@ -4,7 +4,7 @@
 }
 
 #banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), #ffc0cb),
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ffc0cb),
     url(assets/community.jpg);
   background-size: cover;
   background-position: center;
@@ -120,7 +120,7 @@ nav ul li a {
 
 /*feature/menstrual health*/
 
-#feature {
+#menstrual-health {
   width: 100%;
   padding: 70px 0;
 }
@@ -177,7 +177,7 @@ nav ul li a {
 }
 
 .features-img img {
-  width: 70%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -228,7 +228,7 @@ nav ul li a {
 
 /*--service / fertility--*/
 
-#service {
+#fertility {
   width: 100%;
   padding: 70px 0;
   background-color: #efefef;
@@ -363,5 +363,93 @@ hr {
 @media screen and (max-width: 770px) {
   .menopause-col {
     flex-basis: 100%;
+  }
+}
+
+/*--footer--*/
+
+#footer {
+  padding: 100px 0 20px;
+  background: #efefef;
+  position: relative;
+}
+
+.footer-row {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex-basis: 45%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-row h1 {
+  margin: 10px 0;
+}
+
+.footer-row p {
+  line-height: 35px;
+}
+
+.footer-left .fa,
+.footer-right .fa {
+  font-size: 20px;
+  color: #ffc0cb;
+  margin: 10px;
+}
+
+.footer-img {
+  max-width: 370px;
+  opacity: 0.1;
+  position: absolute;
+  left: 50px;
+  top: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.social-links {
+  text-align: center;
+}
+
+.social-links .fa {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  border: 1px solid #ffc0cb;
+  margin: 40px 5px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.social-links.fa:hover {
+  background: #ffc0cb;
+  color: #fff;
+  transform: translate(-7px);
+}
+
+.social-links p {
+  font-size: 12px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 770px) {
+  .footer-left,
+  .footer-right {
+    flex-basis: 100%;
+    font-size: 14px;
+  }
+  .footer-img {
+    top: 25%;
   }
 }

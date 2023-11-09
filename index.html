@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TotalWoman</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+      href="https://stackpath.bootstrapcdn.com/fontawesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
   </head>
   <body>
     <section id="banner">
-      <img src="assets/logo.png" class="logo" />
+      <img src="" class="logo" />
       <div class="banner-text">
         <h1>Total Woman</h1>
         <p>Nurturing Women's Health and Empowering Wellness</p>
         <div class="banner-btn">
-          <a href="#"><span></span>Find Out</a>
+          <a href="#"><span></span>Sign In</a>
           <a href="#"><span></span> Learn More</a>
         </div>
       </div>
@@ -26,11 +28,11 @@
     <div id="sideNav">
       <nav>
         <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">MENSTRUAL</a></li>
-          <li><a href="#">FERTILITY</a></li>
-          <li><a href="#">MENOPAUSE</a></li>
-          <li><a href="#">SUBSCRIBE</a></li>
+          <li><a href="#banner">HOME</a></li>
+          <li><a href="#menstrual-health">MENSTRUAL HEALTH</a></li>
+          <li><a href="#fertility">FERTILITY</a></li>
+          <li><a href="#menopause">MENOPAUSE</a></li>
+          <li><a href="#footer">SUBSCRIBE</a></li>
         </ul>
       </nav>
     </div>
@@ -40,7 +42,7 @@
 
     <!--Features/menstrual health-->
 
-    <section id="feature">
+    <section id="menstrual-health">
       <div class="title-text">
         <p>MENSTRUAL HEALTH</p>
         <h1>Embrace your flow Own your health</h1>
@@ -91,7 +93,7 @@
 
     <!--Service / Fertility-->
 
-    <section id="service">
+    <section id="fertility">
       <div class="title-text">
         <p>FERTILITY</p>
         <h1>Nurturing Your Reproductive Vitality</h1>
@@ -141,7 +143,7 @@
     <section id="menopause">
       <div class="title-text">
         <p>MENOPAUSE</p>
-        <h1>How to thrive in menopause</h1>
+        <h1>Unlocking The Secrets to Thrive in Menopause</h1>
       </div>
       <div class="menopause-row">
         <div class="menopause-col">
@@ -185,6 +187,38 @@
       </div>
     </section>
 
+    <!--footer-->
+
+    <section id="footer">
+      <img src="assets/logo.png" class="footer-img" />
+      <div class="title-text">
+        <p>Join Our Community</p>
+        <h1>Subscribe Today</h1>
+      </div>
+
+      <div class="footer-row">
+        <div class="footer-left">
+          <h1>Opening Hour</h1>
+          <p><i class="fa fa-clock-o"></i>Monday to Friday - 9am to 9pm</p>
+          <p><i class="fa fa-clock-o"></i>Saturday and Sunday - 8am to 11pm</p>
+        </div>
+        <div class="footer-right">
+          <h1>Subscribe</h1>
+          <p>#3 Bode Thomas<i class="fa fa-map-marker"></i></p>
+          <p>hello@totalwoman.com<i class="fa fa-paper-plane"></i></p>
+          <p>+234 1234 5678<i class="fa fa-phone"></i></p>
+        </div>
+      </div>
+
+      <div class="social-links>">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-youtube-play"></i>
+        <p>Nurturing total wellness</p>
+      </div>
+    </section>
+
     <script>
       var menuBtn = document.getElementById("menuBtn");
       var sideNav = document.getElementById("sideNav");
@@ -200,6 +234,11 @@
           sideNav.style.right = "-250px";
           menu.src = "assets/menu.png";
         }
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+          speed: 1000,
+          speedAsduration: true,
+        });
       };
     </script>
   </body>
